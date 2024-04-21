@@ -1,0 +1,87 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwitwwv0ud8j"]
+
+[ext_resource type="PackedScene" uid="uid://cwfs3fvjc0vur" path="res://celula.tscn" id="1_6kidy"]
+[ext_resource type="FontFile" uid="uid://bjmucoma2lnjc" path="res://Online Market.otf" id="1_lakpo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pb02c"]
+bg_color = Color(0.937255, 0.686275, 0.647059, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.937255, 0.552941, 0.635294, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_284vj"]
+bg_color = Color(0.945098, 0.72549, 0.584314, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.937255, 0.552941, 0.635294, 1)
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="celulas" type="GridContainer" parent="BG"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="celula" parent="BG/celulas" instance=ExtResource("1_6kidy")]
+layout_mode = 2
+
+[node name="celula2" parent="BG/celulas" instance=ExtResource("1_6kidy")]
+layout_mode = 2
+
+[node name="celula3" parent="BG/celulas" instance=ExtResource("1_6kidy")]
+layout_mode = 2
+
+[node name="celula4" parent="BG/celulas" instance=ExtResource("1_6kidy")]
+layout_mode = 2
+
+[node name="celula5" parent="BG/celulas" instance=ExtResource("1_6kidy")]
+layout_mode = 2
+
+[node name="celula6" parent="BG/celulas" instance=ExtResource("1_6kidy")]
+layout_mode = 2
+
+[node name="celula7" parent="BG/celulas" instance=ExtResource("1_6kidy")]
+layout_mode = 2
+
+[node name="celula8" parent="BG/celulas" instance=ExtResource("1_6kidy")]
+layout_mode = 2
+
+[node name="celula9" parent="BG/celulas" instance=ExtResource("1_6kidy")]
+layout_mode = 2
+
+[node name="BtnReiniciar" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_lakpo")
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxFlat_pb02c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_284vj")
+text = "REINICIAR"
